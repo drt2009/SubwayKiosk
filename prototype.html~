@@ -16,27 +16,34 @@
 <div class="container">
   <div class="row">
     <div class="span8">
-      	<section class='menuItemButton btn btn-primary btn-large' id='sandwich' data-attributes='{"name":"Spicy Italian","price":"4.99"}' href='#'>
-		<img src="MenuItems/Subs/spicyItalian.jpg">		
-		<p>Spicy Italian</p>
+	<section class='menuItemButton btn btn-primary btn-large' data-attributes='{"name":"Big Philly Cheese Steak","price":"4.99"}' href='#'>
+		<img src="MenuItems/Subs/bigphilchstk.jpg">		
+		<p>Big Philly Cheese Steak</p>
+	</section>      	
+	<section class='menuItemButton btn btn-primary btn-large' data-attributes='{"name":"BLT","price":"4.99"}' href='#'>
+		<img src="MenuItems/Subs/BLT.jpg">		
+		<p>BLT</p>
 	</section>
-	<section class='menuItemButton btn btn-primary btn-large' id='sandwich' data-attributes='{"name":"Cold Cut Combo","price":"4.99"}' href='#'>
+	<section class='menuItemButton btn btn-primary btn-large' data-attributes='{"name":"Chicken Bacon Ranch","price":"4.99"}' href='#'>
+		<img src="MenuItems/Subs/cbr.jpg">		
+		<p>Chicken Bacon Ranch</p>
+	</section>
+	<section class='menuItemButton btn btn-primary btn-large' data-attributes='{"name":"Cold Cut Combo","price":"4.99"}' href='#'>
 		<img src="MenuItems/Subs/ccc.jpg">		
 		<p>Cold Cut Combo</p>
 	</section>
-	<section class='menuItemButton btn btn-primary btn-large' id='sandwich' data-attributes='{"name":"Spicy Italian","price":"4.99"}' href='#'>
+	<section class='menuItemButton btn btn-primary btn-large' data-attributes='{"name":"Roast Beef","price":"4.99"}' href='#'>
+		<img src="MenuItems/Subs/rstbeef.jpg">		
+		<p>Roast Beef</p>
+	</section>
+	<section class='menuItemButton btn btn-primary btn-large' data-attributes='{"name":"Spicy Italian","price":"4.99"}' href='#'>
 		<img src="MenuItems/Subs/spicyItalian.jpg">		
 		<p>Spicy Italian</p>
 	</section>
-	<section class='menuItemButton btn btn-primary btn-large' id='sandwich' data-attributes='{"name":"Spicy Italian","price":"4.99"}' href='#'>
-		<img src="MenuItems/Subs/spicyItalian.jpg">		
-		<p>Spicy Italian</p>
+	<section class='menuItemButton btn btn-primary btn-large' data-attributes='{"name":"Sriracha Chicken Melt","price":"4.99"}' href='#'>
+		<img src="MenuItems/Subs/srirachaChicken.jpg">		
+		<p>Sriracha Chicken Melt</p>
 	</section>
-	<section class='menuItemButton btn btn-primary btn-large' id='sandwich' data-attributes='{"name":"BLT","price":"4.99"}' href='#'>BLT</section>
-      	<section class='menuItemButton btn btn-primary btn-large' id='sandwich' data-attributes='{"name":"Spicy Italian","price":"4.99"}' href='#'>Spicy Italian</section>
-	<section class='menuItemButton btn btn-primary btn-large' id='sandwich' data-attributes='{"name":"BLT","price":"4.99"}' href='#'>BLT</section>
-      	<section class='menuItemButton btn btn-primary btn-large' id='sandwich' data-attributes='{"name":"Spicy Italian","price":"4.99"}' href='#'>Spicy Italian</section>
-	<section class='menuItemButton btn btn-primary btn-large' id='sandwich' data-attributes='{"name":"BLT","price":"4.99"}' href='#'>BLT</section>
     </div>
     <div class="span4">
       <table>

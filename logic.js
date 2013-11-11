@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  $('a.menuItemButton').click(function(e) {
+  $('section.menuItemButton').click(function(e) {
     e.preventDefault();
     var menuItemAttributes = $(this).data('attributes');
     var row = $('tr.menuItemDisplay');
