@@ -1,10 +1,4 @@
-body, html {
-  height: 99%;
-  width: 99%;
-}
-
 #thankYouDiv{
-	background: linear-gradient(-45deg, #04B404, #F7FE2E);
 	height: 100%;
 	width: 100%;
 	text-align:center;
