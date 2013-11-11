@@ -5,6 +5,7 @@
 
   <!-- CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="grid.css" rel="stylesheet">
 
   <!-- Javascript -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
@@ -12,7 +13,22 @@
 </head>
 <body>
 
-<a class='menuItem btn btn-primary btn-large' id='sandwich' data-attributes='{"name":"Spicy Italian","price":"4.99"}' href='#'>Sandwich</a>
-
+<div class="container">
+  <div class="row">
+    <div class="span8">
+      <a class='menuItemButton btn btn-primary btn-large' id='sandwich' data-attributes='{"name":"Spicy Italian","price":"4.99"}' href='#'>Sandwich</a>
+    </div>
+    <div class="span4">
+      <table>
+        <tr class="menuItemDisplay">
+          <td class="itemID">1</td>
+          <td class="itemName">Sandwich</td>
+          <td class="itemPrice">4.99</td>
+        </tr>
+      </table> 
+    </div>
+  </div>
+</div>
+      
 </body>
 </html>
