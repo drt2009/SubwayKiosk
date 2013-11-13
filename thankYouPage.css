@@ -1,9 +1,16 @@
+html{
+	height:100%;
+	width: 100%;
+}
+body{
+	height:100%;
+	width: 100%;
+}
 #thankYouDiv{
 	height: 100%;
 	width: 100%;
-	text-align:center;
+	text-align: center;
 }
-
 #thankYouDiv p{
 	position:absolute; 
 	top:50%; 
