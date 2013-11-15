@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  var buttonContainer = $(".buttonContainer");
+
+  //should be main menu later
+  buttonContainer.html($(".buttonDiv.top").html());
 
   function MenuItem(id, options) {
     this.id = id;
@@ -30,15 +34,21 @@ $(document).ready(function() {
     $('.orderTotal').html(total.toFixed(2));
   };
 
-  $('section.menuItemButton').click(function(e) {
+  buttonContainer.on("click", 'section.menuItemButton', function (e) {
     e.preventDefault();
     var menuItemAttributes = $(this).data('attributes');
-    if (!menuItemAttributes.isCondiment) {
-      currentMenuItem.condiments.push(menuItemAttributes.name);
-    } else {
-      var menuItem = menuItems.push(new MenuItem(menuItems.length, menuItemAttributes));
-      if (!menuItemAttributes.hasCondiments) currentMenuItem = menuItem;
+    if(menuItemAttributes) {
+      if (!menuItemAttributes.isCondiment) {
+        currentMenuItem.condiments.push(menuItemAttributes.name);
+      } else {
+        var menuItem = menuItems.push(new MenuItem(menuItems.length, menuItemAttributes));
+        if (!menuItemAttributes.hasCondiments) currentMenuItem = menuItem;
+      }
     }
+
+    var next = ($(this).data("next") || $(this).closest(".buttonDiv").data("next"));
+    if (next) buttonContainer.html($(".buttonDiv." + next).html());
+
     rebuildOrder();
   });
 });

@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+  <title>Subway Kiosk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+
+  <!-- CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="grid.css" rel="stylesheet">
+  <link href="htmlcss.css" rel="stylesheet">
+  <link href="subMenu.css" rel="stylesheet">
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="logic.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="span8 buttonContainer">
+
+    </div>
+    <div class="span4">
+      <table class="order">
+      </table>
+      <div class="orderTotal"></div>
+    </div>
+  </div>
+</div>
+
+<div class="buttonDiv sandwiches" style="display: none;">
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Big Philly Cheese Steak","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+    <img src="MenuItems/Subs/bigphilchstk.jpg">
+    <p>Big Philly Cheese Steak</p>
+  </section>        
+  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"BLT","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+    <img src="MenuItems/Subs/BLT.jpg">
+    <p>BLT</p>
+  </section>
+  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"Chicken Bacon Ranch","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+    <img src="MenuItems/Subs/cbr.jpg">
+    <p>Chicken Bacon Ranch</p>
+  </section>
+  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"Cold Cut Combo","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+    <img src="MenuItems/Subs/ccc.jpg">
+    <p>Cold Cut Combo</p>
+  </section>
+  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"Roast Beef","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+    <img src="MenuItems/Subs/rstbeef.jpg">
+    <p>Roast Beef</p>
+  </section>
+  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"Spicy Italian","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+    <img src="MenuItems/Subs/spicyItalian.jpg">
+    <p>Spicy Italian</p>
+  </section>
+  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"Sriracha Chicken Melt","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+    <img src="MenuItems/Subs/srirachaChicken.jpg">
+    <p>Sriracha Chicken Melt</p>
+  </section>
+</div>
+
+<div class="buttonDiv top" style="display: none;">
+  <section class='menuItemButton btn btn-primary btn-large' id = "subs"  href='#' data-next='sandwiches'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Subs</p>
+  </section>        
+  <section class='menuItemButton btn btn-primary btn-large' id = "pizza" btn btn-primary btn-large href='#'>
+    <img src = "MenuItems/Menu/pizza.jpg">
+    <p>Pizza</p>
+  </section>
+    <section class='menuItemButton btn btn-primary btn-large'  id = "Salads" btn btn-primary btn-large href='#'>
+    <img src = "MenuItems/Menu/salads.jpg">
+    <p>Salads</p>
+  </section>
+  <section class='menuItemButton btn btn-primary btn-large'  id = "soup" btn btn-primary btn-large href='#'>
+    <img src = "MenuItems/Menu/soup.jpg">
+    <p>Soups</p>
+  </section>
+  <section class='menuItemButton btn btn-primary btn-large'  id = "drink" btn btn-primary btn-large href='#'>
+    <img src = "MenuItems/Menu/Drinks.jpg">
+    <p>Drinks</p>
+  </section>
+  <section class='menuItemButton btn btn-primary btn-large'  id = "side" btn btn-primary btn-large href='#'>
+    <img src ="MenuItems/Menu/sides.jpg">
+    <p>Sides</p>
+  </section>
+</div>
+
+</body>
+</html>
