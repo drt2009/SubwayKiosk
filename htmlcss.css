@@ -8,15 +8,12 @@ body{
 }
 
 .buttonContainer{
-	height: 100%;
+	height: 75%;
 	overflow-y: auto;
 }
 
 .orderContainer{
+	height: 75%;
 	overflow-y: auto;
 	background-color: RGBa(255,255,255,.5)
-}
-
-table{
-	overflow: auto;
 }
