@@ -20,13 +20,13 @@ $(document).ready(function() {
     for (var i = 0; i < menuItems.length; i++) {
       total += parseFloat(menuItems[i].price);
       html += "<tr>" +
-        "<td>" + (menuItems[i].id + 1) + "</td>" +
-        "<td>" + menuItems[i].name + "</td>" +
-        "<td>$ " + menuItems[i].price + "</td></tr>";
+        "<td class='number'>" + (menuItems[i].id + 1) + "</td>" +
+        "<td class='name'>" + menuItems[i].name + "</td>" +
+        "<td class='price'>$ " + menuItems[i].price + "</td></tr>";
 
       if (menuItems[i].condiments.length > 0) {
         for (var i = 0; i < menuItems[i].condiments.length; i++) {
-          html += "<tr><td></td><td>" + menuItems[i].condiments[i] + "</td><td></td></tr>";
+          html += "<tr><td class='number'></td><td class='name'>" + menuItems[i].condiments[i] + "</td><td class='price'></td></tr>";
         }
       }
     }
