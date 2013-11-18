@@ -19,11 +19,14 @@ body{
 }
 
 .number{
-	width: 20px;
+	width: 10%;
+	text-align: right;
+	padding: 5px;
+	font-weight:bold;
 }
 
 .name{
-	width: 100px;
+	width: 70%
 }
 
 .price{
