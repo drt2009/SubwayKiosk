@@ -17,3 +17,15 @@ body{
 	overflow-y: auto;
 	background-color: RGBa(255,255,255,.5)
 }
+
+.number{
+	width: 20px;
+}
+
+.name{
+	width: 100px;
+}
+
+.price{
+	width: 50px;
+}
