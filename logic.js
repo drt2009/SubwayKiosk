@@ -30,7 +30,7 @@ $(document).ready(function() {
         }
       }
     }
-    $('table.order').html(html);
+    $('table.order tbody').html(html);
     $('.orderTotal').html(total.toFixed(2));
   };
 
