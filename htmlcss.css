@@ -18,6 +18,34 @@ body{
 	background-color: RGBa(255,255,255,.5)
 }
 
+.navigation{
+	position: absolute;
+	bottom: 150px;
+	width: 100%
+}
+
+.navigation .btn{
+	height:50px;
+}
+
+.navigation #back{
+	width: 125px;
+	position: absolute;
+	left: 150px;
+}
+
+.navigation #cancel{
+	width: 100px;
+	position: absolute;
+	right: 225px;
+}
+
+.navigation #order{
+	width: 100px;
+	position: absolute;
+	right: 375px;
+}
+
 .number{
 	width: 10%;
 	text-align: right;
