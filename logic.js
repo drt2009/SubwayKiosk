@@ -21,19 +21,22 @@ $(document).ready(function() {
     for (var i = 0; i < menuItems.length; i++) {
       total += parseFloat(menuItems[i].price);
       html += "<tr>" +
-        "<td class='number'>" + (menuItems[i].id + 1) + "</td>" +
+        "<td><a class='btn btn-danger delete' data-index='" + i + "'>X</a></td>" +
+        "<td class='number'>" + (i + 1) + "</td>" +
         "<td class='name'>" + menuItems[i].name + "</td>" +
         "<td class='price'>$ " + menuItems[i].price + "</td></tr>";
 
       if (menuItems[i].condiments.length > 0) {
         for (var j = 0; j < menuItems[i].condiments.length; j++) {
-          html += "<tr><td class='number'></td><td class='name'>" + menuItems[i].condiments[j] + "</td><td class='price'></td></tr>";
+          html += "<tr><td></td><td class='number'></td><td class='name'>" + menuItems[i].condiments[j] + "</td><td class='price'></td></tr>";
         }
       }
     }
     $('table.order').html(html);
-    $('.orderTotal').html(total.toFixed(2));
+    $('.orderTotal').html("<b>TOTAL: $" + total.toFixed(2) + "</b>");
   };
+
+  rebuildOrder();
 
   container.on("click", '.menuItemButton', function (e) {
     e.preventDefault();
@@ -64,6 +67,13 @@ $(document).ready(function() {
     if (next) buttonContainer.html($(".buttonDiv." + next).html());
     if (next === "mainMenu") currentMenuItem = null;
 
+    rebuildOrder();
+  });
+
+  container.on("click", 'a.delete', function (e) {
+    e.preventDefault();
+    menuItems.splice(parseInt($(this).data("index"), 10), 1);
+    console.log(menuItems);
     rebuildOrder();
   });
 });
