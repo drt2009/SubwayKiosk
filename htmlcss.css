@@ -60,3 +60,12 @@ body{
 .price{
 	width: 50px;
 }
+
+.hidden{
+	display: none;
+}
+
+section{
+	width: 150px;
+	height: 150px;
+}

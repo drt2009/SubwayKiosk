@@ -19,88 +19,305 @@
 
 <div class="container">
   <div class="row">
-    <div class="span8 buttonContainer">
+    <div class="span8">
+      <div class="buttonContainer">
 
+      </div>
+      <div class="backToMenu">
+        <section class= 'btn menuItemButton btn-inverse' id='back' data-next="mainMenu">
+          Add another Item/ Back to Menu
+        </section>
+      </div>
     </div>
     <div class="span4">
       <div class="orderContainer">
         <table class="order"></table>
       </div>
       <div class="orderTotal"></div>
-      <div class="controls"></div>
+      <div class="controls">
+        <section class= 'btn btn-success' id='Order'>
+          Place Order
+        </section>
+        <section class= 'btn btn-danger' id='cancel'>
+          Cancel Order
+        </section>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="navigation">
-	<section class= 'btn btn-inverse'  id='back'>
-		Add another Item/ Back to Menu
-	</section>
-	<section class= 'btn btn-success' id='Order'>
-		Place Order
-	</section>
-	<section class= 'btn btn-danger' id='cancel'>
-		Cancel Order
-	</section>
+<div class="buttonDiv sandwiches hidden">
+  <div class='nextDiv' data-next="size">
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Big Philly Cheese Steak","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+      <img src="MenuItems/Subs/bigphilchstk.jpg">
+      <p>Big Philly Cheese Steak</p>
+    </section>        
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"BLT","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+      <img src="MenuItems/Subs/BLT.jpg">
+      <p>BLT</p>
+    </section>
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Chicken Bacon Ranch","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+      <img src="MenuItems/Subs/cbr.jpg">
+      <p>Chicken Bacon Ranch</p>
+    </section>
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Cold Cut Combo","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+      <img src="MenuItems/Subs/ccc.jpg">
+      <p>Cold Cut Combo</p>
+    </section>
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Roast Beef","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+      <img src="MenuItems/Subs/rstbeef.jpg">
+      <p>Roast Beef</p>
+    </section>
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Spicy Italian","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+      <img src="MenuItems/Subs/spicyItalian.jpg">
+      <p>Spicy Italian</p>
+    </section>
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Sriracha Chicken Melt","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
+      <img src="MenuItems/Subs/srirachaChicken.jpg">
+      <p>Sriracha Chicken Melt</p>
+    </section>
+  </div>
 </div>
 
-<div class="buttonDiv sandwiches" style="display: none;">
-  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Big Philly Cheese Steak","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
-    <img src="MenuItems/Subs/bigphilchstk.jpg">
-    <p>Big Philly Cheese Steak</p>
-  </section>        
-  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"BLT","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
-    <img src="MenuItems/Subs/BLT.jpg">
-    <p>BLT</p>
-  </section>
-  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"Chicken Bacon Ranch","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
-    <img src="MenuItems/Subs/cbr.jpg">
-    <p>Chicken Bacon Ranch</p>
-  </section>
-  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"Cold Cut Combo","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
-    <img src="MenuItems/Subs/ccc.jpg">
-    <p>Cold Cut Combo</p>
-  </section>
-  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"Roast Beef","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
-    <img src="MenuItems/Subs/rstbeef.jpg">
-    <p>Roast Beef</p>
-  </section>
-  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"Spicy Italian","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
-    <img src="MenuItems/Subs/spicyItalian.jpg">
-    <p>Spicy Italian</p>
-  </section>
-  <section class='menuItemButton btn btn-success  btn-large' data-attributes='{"name":"Sriracha Chicken Melt","price":"4.99","isCondiment":"false","hasCondiments":"true"}' href='#'>
-    <img src="MenuItems/Subs/srirachaChicken.jpg">
-    <p>Sriracha Chicken Melt</p>
-  </section>
-</div>
-
-<div class="buttonDiv top" style="display: none;">
-  <section class='menuItemButton btn btn-primary btn-large' id = "subs"  href='#' data-next='sandwiches'>  
+<div class="buttonDiv mainMenu hidden">
+  <section class='menuItemButton btn btn-success btn-large' href='#' data-next='sandwiches'>  
     <img src = "MenuItems/Menu/Subs.jpg">
     <p>Subs</p>
   </section>        
-  <section class='menuItemButton btn btn-primary btn-large' id = "pizza" btn btn-primary btn-large href='#'>
+  <section class='menuItemButton btn btn-success btn-large' href='#' data-next='pizza'>
     <img src = "MenuItems/Menu/pizza.jpg">
     <p>Pizza</p>
   </section>
-    <section class='menuItemButton btn btn-primary btn-large'  id = "Salads" btn btn-primary btn-large href='#'>
+    <section class='menuItemButton btn btn-success btn-large' href='#' data-next='salads'>
     <img src = "MenuItems/Menu/salads.jpg">
     <p>Salads</p>
   </section>
-  <section class='menuItemButton btn btn-primary btn-large'  id = "soup" btn btn-primary btn-large href='#'>
+  <section class='menuItemButton btn btn-success btn-large' href='#' data-next='soup'>
     <img src = "MenuItems/Menu/soup.jpg">
     <p>Soups</p>
   </section>
-  <section class='menuItemButton btn btn-primary btn-large'  id = "drink" btn btn-primary btn-large href='#'>
+  <section class='menuItemButton btn btn-success btn-large' href='#' data-next='drinks'>
     <img src = "MenuItems/Menu/Drinks.jpg">
     <p>Drinks</p>
   </section>
-  <section class='menuItemButton btn btn-primary btn-large'  id = "side" btn btn-primary btn-large href='#'>
+  <section class='menuItemButton btn btn-success btn-large' href='#' data-next='sides'>
     <img src ="MenuItems/Menu/sides.jpg">
     <p>Sides</p>
   </section>
 </div>
+
+<div class="buttonDiv size hidden">
+  <div class="nextDiv" data-next="bread">
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"6 Inch","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>6 Inch</p>
+    </section>        
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"12 Inch","isCondiment":"true"}' href='#'>
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>12 Inch</p>
+    </section>
+  </div>
+</div>
+
+<div class="buttonDiv bread hidden">
+  <div class="nextDiv" data-next="toasted">
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"9 Grain Oat","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>9 Grain Oat</p>
+    </section>
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Garlic","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Garlic</p>
+    </section> 
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Italian","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Italian</p>
+    </section> 
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Italian Herb and Cheese","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Italian Herb and Cheese</p>
+    </section> 
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Wheat","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Wheat</p>
+    </section> 
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"White","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>White</p>
+    </section> 
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Flat Bread","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Flat Bread</p>
+    </section>  
+  </div>
+</div>
+
+<div class="buttonDiv toasted hidden">
+  <div class="nextDiv" data-next="cheese">
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Toasted","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Toasted</p>
+    </section>        
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Not Toasted","isCondiment":"true"}' href='#'>
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Not Toasted</p>
+    </section>
+  </div>
+</div>
+
+<div class="buttonDiv cheese hidden">
+  <div class="nextDiv" data-next="veggies">
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"American","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>American</p>
+    </section>
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Cheddar","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Cheddar</p>
+    </section> 
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Pepper Jack","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Pepper Jack</p>
+    </section> 
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Provolone","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Provolone</p>
+    </section> 
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Shredded Monterey Jack","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Shredded Monterey Jack</p>
+    </section> 
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Swiss","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>Swiss</p>
+    </section> 
+    <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"None","isCondiment":"true"}' href='#'>  
+      <img src = "MenuItems/Menu/Subs.jpg">
+      <p>None</p>
+    </section>  
+  </div>
+</div>
+
+<div class="buttonDiv veggies hidden">
+  <section class='menuItemButton btn btn-success btn-large' href='#' data-next="sauce">  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Finished Picking Veggies</p>
+  </section> 
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Avocado","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Avocado</p>
+    <input type="checkbox">
+  </section>
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Banana Peppers","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Banana Peppers</p>
+    <input type="checkbox">
+  </section> 
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Cucumbers","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Cucumbers</p>
+    <input type="checkbox">
+  </section> 
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Green Peppers","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Green Peppers</p>
+    <input type="checkbox">
+  </section> 
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Jalapeno Peppers","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Jalapeno Peppers</p>
+    <input type="checkbox">
+  </section> 
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Lettuce","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Lettuce</p>
+    <input type="checkbox">
+  </section> 
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Olives","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Olives</p>
+    <input type="checkbox">
+  </section>
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Onions","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Onions</p>
+    <input type="checkbox">
+  </section>
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Pickles","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Pickles</p>
+    <input type="checkbox">
+  </section>
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Spinach","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Spinach</p>
+    <input type="checkbox">
+  </section>
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Tomato","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Tomato</p>
+    <input type="checkbox">
+  </section> 
+</div>
+
+<div class="buttonDiv sauce hidden">
+  <section class='menuItemButton btn btn-success btn-large' href='#' data-next="mainMenu" data-end="true">  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Finished Picking Sauces</p>
+  </section>
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Chipotle Southwest","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Chipotle Southwest</p>
+    <input type="checkbox">
+  </section>
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Fat Free Honey Mustard","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Fat Free Honey Mustard</p>
+    <input type="checkbox">
+  </section> 
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Fat Free Sweet Onion","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Fat Free Sweet Onion</p>
+    <input type="checkbox">
+  </section> 
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Mayonnaise","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Mayonnaise</p>
+    <input type="checkbox">
+  </section> 
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Mustard","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Mustard</p>
+    <input type="checkbox">
+  </section> 
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Olive Oil Blend","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Olive Oil Blend</p>
+    <input type="checkbox">
+  </section> 
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Ranch","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Ranch</p>
+    <input type="checkbox">
+  </section>
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Vinegar","isCondiment":"true"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Vinegar</p>
+    <input type="checkbox">
+  </section>
+</div>
+
+<div class="buttonDiv pizza hidden">
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Cheese Pizza","price":"3.99","isCondiment":"false","hasCondiments":"false"}' href='#'>  
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Cheese Pizza</p>
+  </section>        
+  <section class='menuItemButton btn btn-success btn-large' data-attributes='{"name":"Pepperoni Pizza","price":"4.20","isCondiment":"false","hasCondiments":"false"}' href='#'>
+    <img src = "MenuItems/Menu/Subs.jpg">
+    <p>Pepperoni Pizza</p>
+  </section>
+</div>
+
 
 </body>
 </html>
