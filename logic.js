@@ -76,4 +76,19 @@ $(document).ready(function() {
     console.log(menuItems);
     rebuildOrder();
   });
+
+  $('.placeOrder').click(function (e) {
+    buttonContainer.html($(".buttonDiv.confirmation").html());
+    buttonContainer.find(".confirmationMessage").html("Are you sure you want to finish your order?");
+  });
+
+  $('.cancelOrder').click(function (e) {
+    buttonContainer.html($(".buttonDiv.confirmation").html());
+    buttonContainer.find(".confirmationMessage").html("Are you sure you want to cancel your order?");
+  });
+
+  container.on("click",'.clearOrder', function (e) {
+    menuItems = [];
+    rebuildOrder();
+  });
 });
