@@ -97,3 +97,8 @@ section{
 	bottom: -10;
 	left: 0;
 }
+
+img{
+	height: 75px;
+	width: 100px;
+}
