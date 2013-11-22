@@ -58,13 +58,6 @@ body{
 	right: 375px;
 }
 
-.number{
-	width: 10%;
-	text-align: right;
-	padding: 5px;
-	font-weight:bold;
-}
-
 .name{
 	width: 60%
 }
@@ -103,4 +96,12 @@ section{
 img{
 	height: 75px;
 	width: 100px;
+}
+
+a.delete{
+	font-size: 9;
+}
+
+a.duplicate{
+	font-size: 9;
 }

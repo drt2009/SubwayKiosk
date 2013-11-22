@@ -1,19 +1,21 @@
 $(document).ready(function() {
   var container = $(".container");
   var buttonContainer = $(".buttonContainer");
+  var currentTimeout = null;
 
   //should be main menu later
   buttonContainer.html($(".buttonDiv.mainMenu").html());
 
-  function MenuItem(id, options) {
-    this.id = id;
+  var currentMenuItem = null;
+  var menuItems = [];
+  var ids = 0;
+
+  function MenuItem(options) {
+    this.id = ids++;
     this.price = options.price;
     this.name = options.name;
     this.condiments = (options.condiments || []);
   }
-
-  var currentMenuItem = null;
-  var menuItems = [];
 
   var rebuildOrder = function () {
     var html = "";
@@ -22,13 +24,13 @@ $(document).ready(function() {
       total += parseFloat(menuItems[i].price);
       html += "<tr>" +
         "<td><a class='btn btn-danger delete' data-index='" + i + "'>X</a></td>" +
-        "<td class='number'>" + (i + 1) + "</td>" +
+        "<td><a class='btn btn-success duplicate' data-index='" + i + "'>+</a></td>" +
         "<td class='name'>" + menuItems[i].name + "</td>" +
-        "<td class='price'>$ " + menuItems[i].price + "</td></tr>";
+        "<td class='price'><b>$ " + menuItems[i].price + "</b></td></tr>";
 
       if (menuItems[i].condiments.length > 0) {
         for (var j = 0; j < menuItems[i].condiments.length; j++) {
-          html += "<tr><td></td><td class='number'></td><td class='name'>" + menuItems[i].condiments[j] + "</td><td class='price'></td></tr>";
+          html += "<tr><td></td><td></td><td class='name'><i>" + menuItems[i].condiments[j] + "</i></td><td class='price'></td></tr>";
         }
       }
     }
@@ -58,7 +60,7 @@ $(document).ready(function() {
           currentMenuItem.condiments.push(menuItemAttributes.name);
         }
       } else {
-        var menuItem = new MenuItem(menuItems.length, menuItemAttributes);
+        var menuItem = new MenuItem(menuItemAttributes);
         menuItems.push(menuItem);
         if (menuItemAttributes.hasCondiments === "true") currentMenuItem = menuItem;
       }
@@ -73,7 +75,15 @@ $(document).ready(function() {
   container.on("click", 'a.delete', function (e) {
     e.preventDefault();
     menuItems.splice(parseInt($(this).data("index"), 10), 1);
-    console.log(menuItems);
+    rebuildOrder();
+  });
+
+  container.on("click", 'a.duplicate', function (e) {
+    console.log("jhhit")
+    e.preventDefault();
+    var copyItem = menuItems[parseInt($(this).data("index"), 10)];
+    var menuItem = new MenuItem({price: copyItem.price, name: copyItem.name, condiments: copyItem.condiments});
+    menuItems.push(menuItem);
     rebuildOrder();
   });
 
@@ -90,5 +100,13 @@ $(document).ready(function() {
   container.on("click",'.clearOrder', function (e) {
     menuItems = [];
     rebuildOrder();
+    currentTimeout = setTimeout(function() {buttonContainer.html($(".buttonDiv.mainMenu").html());}, 5000);
+  });
+
+  container.on("click",'.clearTimeout', function (e) {
+    if (currentTimeout !== null) {
+      clearTimeout(currentTimeout);
+      currentTimeout = null;
+    }
   });
 });
