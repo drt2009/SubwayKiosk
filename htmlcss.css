@@ -71,8 +71,24 @@ body{
 }
 
 section{
-	width: 150px;
-	height: 120px;
+	width: 110px;
+	height: 135px;
+}
+
+section.filler1{
+	visibility: hidden;
+	width: 185;
+	height: 70;
+}
+
+section.filler2{
+	visibility: hidden;
+	width: 60;
+	height: 70;
+}
+
+section.continue{
+	height: 70;
 }
 
 .placeOrder{

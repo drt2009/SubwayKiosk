@@ -180,9 +180,11 @@
 </div>
 
 <div class="buttonDiv veggies hidden">
-  <section class='menuItemButton btn btn-success btn-large' href='#' data-next="sauce">  
-    <p>Finished Picking Veggies</p>
+  <section class='menuItemButton filler1 btn btn-success btn-large'><p>Filler</p></section>
+  <section class='menuItemButton continue btn btn-success btn-large' href='#' data-next="sauce">  
+    <p>Click Here to Continue</p>
   </section> 
+  <section class='menuItemButton filler2 btn btn-success btn-large'><p>Filler</p></section>
   <section class='menuItemButton btn btn-warning btn-large' data-attributes='{"name":"Avocado","isCondiment":"true"}' href='#'>  
     <img src = "MenuItems/Veggies/avd.jpg">
     <p>Avocado</p>
@@ -241,9 +243,11 @@
 </div>
 
 <div class="buttonDiv sauce hidden">
-  <section class='menuItemButton btn btn-success btn-large' href='#' data-next="mainMenu" data-end="true">  
-    <p>Finished Picking Sauces</p>
+  <section class='menuItemButton filler1 btn btn-success btn-large'><p>Filler</p></section>
+  <section class='menuItemButton continue btn btn-success btn-large' href='#' data-next="mainMenu" data-end="true">  
+    <p>Click Here to Continue</p>
   </section>
+  <section class='menuItemButton filler2 btn btn-success btn-large'><p>Filler</p></section>
   <section class='menuItemButton btn btn-warning btn-large' data-attributes='{"name":"Chipotle Southwest","isCondiment":"true"}' href='#'>  
     <p>Chipotle Southwest</p>
     <input type="checkbox" disabled="true">
@@ -352,11 +356,11 @@
 
 <div class="buttonDiv confirmation hidden">
   <h1 class="confirmationMessage"></h1>
-  <section class='menuItemButton btn btn-success btn-large clearOrder' href='#' data-next='thankYou'>  
-    <p>Yes</p>
+  <section class='menuItemButton btn btn-success btn-large clearOrder affirmative' href='#' data-next='thankYou'>  
+    <p></p>
   </section>
   <section class='menuItemButton btn btn-danger btn-large' href='#' data-next='mainMenu'>  
-    <p>No</p>
+    <p>Return to Menu</p>
   </section>
 </div>
 </body>

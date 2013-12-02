@@ -89,12 +89,14 @@ $(document).ready(function() {
 
   $('.placeOrder').click(function (e) {
     buttonContainer.html($(".buttonDiv.confirmation").html());
-    buttonContainer.find(".confirmationMessage").html("Are you sure you want to finish your order?");
+    buttonContainer.find(".confirmationMessage").html("Complete your order?");
+    buttonContainer.find("section.affirmative p").html("Confirm Order");
   });
 
   $('.cancelOrder').click(function (e) {
     buttonContainer.html($(".buttonDiv.confirmation").html());
-    buttonContainer.find(".confirmationMessage").html("Are you sure you want to cancel your order?");
+    buttonContainer.find(".confirmationMessage").html("Cancel your order?");
+    buttonContainer.find("section.affirmative p").html("Cancel Order");
   });
 
   container.on("click",'.clearOrder', function (e) {
